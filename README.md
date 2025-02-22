@@ -4,15 +4,13 @@ Hey, I developed a holograms plugin for my server but its quite simple and easy 
 
 ## Features
 
-- **Create Holograms**: Easily create holograms at specified locations.
-- **Add/Remove Lines**: Modify hologram content by adding or removing lines.
-- **Move Holograms**: Move existing holograms to a new location.
-- **List Holograms**: View a list of all currently created holograms.
-- **Edit Lines**: Update specific lines of a hologram.
-- **Persistent Holograms**: Holograms are saved and reloaded on server restart.
-- **Permissions Support**: Custom permissions for different commands.
-- **Configurable**: Hologram data (position, lines) saved in a config file.
-- **Customizable Display**: Adjust hologram appearance using color codes and formatting.
+- **Create Holograms**
+- **Delete Holograms**
+- *Add lines** - Add a line to a hologram
+- **Move holograms** - Move a hologram to your location
+- **List holograms** - List all holograms
+- **Edit lines** - Edit a line of a hologram
+- **Data saved in config & Configurable**
 
 ## Usage
 You can use this for whatever idm just keep my credits
