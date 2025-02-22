@@ -14,3 +14,7 @@ Hey, I developed a holograms plugin for my server but its quite simple and easy 
 
 ## Usage
 You can use this for whatever idm just keep my credits
+
+## Support
+Uou can gain support for the Holograms plugkn in my discord server
+[Join our Discord](https://discord.gg/9DH3gfknuv)
