@@ -28,13 +28,13 @@ public class HologramsCommand extends BaseCommand {
         sender.sendMessage(" ");
         sender.sendMessage(CC.translate("&b&lHolograms Commands " + "&7[&b" + plugin.getDescription().getVersion() + "&7]"));
         sender.sendMessage(" ");
-        sender.sendMessage(CC.translate("&7* &b/hologram create <name> <line>"));
-        sender.sendMessage(CC.translate("&7* &b/hologram addLine <hologramName> <line>"));
-        sender.sendMessage(CC.translate("&7* &b/hologram setLine <hologramName> <lineNumber> <line>"));
-        sender.sendMessage(CC.translate("&7* &b/hologram removeLine <hologramName> <lineNumber>"));
-        sender.sendMessage(CC.translate("&7* &b/hologram movehere <hologramName>"));
+        sender.sendMessage(CC.translate("&7* &b/hologram create &7<name> <line>"));
+        sender.sendMessage(CC.translate("&7* &b/hologram addLine &7<hologramName> <line>"));
+        sender.sendMessage(CC.translate("&7* &b/hologram setLine &7<hologramName> <lineNumber> <line>"));
+        sender.sendMessage(CC.translate("&7* &b/hologram removeLine &7<hologramName> <lineNumber>"));
+        sender.sendMessage(CC.translate("&7* &b/hologram movehere &7<hologramName>"));
         sender.sendMessage(CC.translate("&7* &b/hologram reload"));
-        sender.sendMessage(" ");
+        sender.sendMessage(CC.translate("&7* &b/hologram list"));
         sender.sendMessage(" ");
     }
 
@@ -136,6 +136,37 @@ public class HologramsCommand extends BaseCommand {
 
         player.sendMessage(CC.translate("&aLine " + lineNumber + " has been removed from hologram '" + name + "'"));
     }
+
+    @Subcommand("list")
+    @Description("List all existing holograms")
+    @CommandPermission("hologram.command.list")
+    public void onListHolograms(Player player) {
+        List<Hologram> holograms = HologramsAPI.getHolograms();
+
+        if (holograms.isEmpty()) {
+            player.sendMessage(CC.translate("&cNo holograms found."));
+            return;
+        }
+
+        StringBuilder hologramList = new StringBuilder();
+        hologramList.append(CC.translate("&b&lHOLOGRAMS:"));
+
+        for (Hologram hologram : holograms) {
+            Location location = hologram.getLocation();
+            String formattedLocation = CC.translate(
+                    String.format("&7* &b%s &7(%.2f, %.2f, %.2f, %s)",
+                            hologram.getName(),
+                            location.getX(),
+                            location.getY(),
+                            location.getZ(),
+                            location.getWorld().getName())
+            );
+            hologramList.append("\n").append(formattedLocation);
+        }
+
+        player.sendMessage(hologramList.toString());
+    }
+
 
     @Subcommand("delete")
     @Description("Delete an existing hologram")

@@ -11,7 +11,7 @@ public final class HologramsPlugin extends JavaPlugin {
         BukkitCommandManager commandManager = new BukkitCommandManager(this);
         commandManager.registerCommand(new HologramsCommand(this));
 
-        HologramsAPI.loadHologramsFromConfig();  // Load holograms from config
+        HologramsAPI.loadHologramsFromConfig();
 
         getLogger().info("Holograms Plugin Enabled!");
     }

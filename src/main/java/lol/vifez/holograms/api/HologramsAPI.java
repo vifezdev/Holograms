@@ -61,6 +61,11 @@ public class HologramsAPI {
         }
     }
 
+    public static List<Hologram> getHolograms() {
+        return new ArrayList<>(holograms);
+    }
+
+
     private static Location loadLocationFromConfig(String name) {
         String worldName = configFile.getConfig().getString("holograms." + name + ".location.world");
         double x = configFile.getConfig().getDouble("holograms." + name + ".location.x");
