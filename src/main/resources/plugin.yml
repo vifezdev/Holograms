@@ -1,0 +1,4 @@
+name: Holograms
+version: '${project.version}'
+main: lol.vifez.holograms.HologramsPlugin
+description: Simple holograms plugin
