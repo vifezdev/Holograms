@@ -3,7 +3,7 @@ package lol.vifez.holograms;
 import co.aikar.commands.BaseCommand;
 import co.aikar.commands.annotation.*;
 import lol.vifez.holograms.api.Hologram;
-import lol.vifez.holograms.api.HologramsAPI;
+import.lol.vifez.holograms.api.HologramsAPI;
 import lol.vifez.holograms.util.CC;
 import org.bukkit.Location;
 import org.bukkit.command.CommandSender;
