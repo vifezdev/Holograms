@@ -6,7 +6,7 @@ Hey, I developed a holograms plugin for my server but its quite simple and easy 
 
 - **Create Holograms**
 - **Delete Holograms**
-- *Add lines** - Add a line to a hologram
+- **Add lines** - Add a line to a hologram
 - **Move holograms** - Move a hologram to your location
 - **List holograms** - List all holograms
 - **Edit lines** - Edit a line of a hologram
